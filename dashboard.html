@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Stackly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            overflow: hidden;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: var(--surface);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .sidebar-nav {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            background: rgba(79, 70, 229, 0.1);
+            color: var(--primary);
+        }
+
+        .sidebar-footer {
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 2.5rem;
+            background: var(--background);
+            overflow-y: auto;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .action-card {
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .action-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .action-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(79, 70, 229, 0.1);
+            color: var(--primary);
+            border-radius: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .upcoming-meetings {
+            background: var(--surface);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid var(--border);
+        }
+
+        .meeting-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .meeting-row:last-child {
+            border-bottom: none;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .sidebar {
+                position: fixed;
+                left: -280px;
+                height: 100vh;
+                z-index: 1000;
+            }
+
+            .sidebar.active {
+                left: 0;
+            }
+
+            .main-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">
+                <i class="fas fa-bolt"></i> Stackly
+            </a>
+        </div>
+
+        <nav class="sidebar-nav">
+            <div class="nav-item-dropdown" style="width: 100%;">
+                <a href="index.html" class="nav-item active"><i class="fas fa-home"></i> Home <i
+                        class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: auto;"></i></a>
+                <div class="dropdown-menu"
+                    style="position: static; opacity: 1; visibility: visible; transform: none; background: transparent; border: none; box-shadow: none; padding-left: 2rem; display: none;">
+                    <a href="index.html" class="dropdown-item" style="padding: 0.5rem 0;"><i class="fas fa-home"></i>
+                        Home 1</a>
+                    <a href="index2.html" class="dropdown-item" style="padding: 0.5rem 0;"><i
+                            class="fas fa-microchip"></i> Home 2</a>
+                </div>
+            </div>
+            <a href="#" class="nav-item"><i class="fas fa-video"></i> Meetings</a>
+            <a href="#" class="nav-item"><i class="fas fa-calendar-alt"></i> Calendar</a>
+            <a href="#" class="nav-item"><i class="fas fa-comments"></i> Chat</a>
+            <a href="#" class="nav-item"><i class="fas fa-users"></i> Teams</a>
+            <a href="#" class="nav-item"><i class="fas fa-cog"></i> Settings</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-avatar">AD</div>
+            <div style="flex: 1;">
+                <div style="font-weight: 600; font-size: 0.9rem;">Alex Doe</div>
+                <div style="color: var(--text-secondary); font-size: 0.75rem;">Premium Plan</div>
+            </div>
+            <a href="index.html" style="color: var(--text-secondary);"><i class="fas fa-sign-out-alt"></i></a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="dashboard-header">
+            <div>
+                <h1 style="font-size: 2rem;">Good Morning, Alex</h1>
+                <p style="color: var(--text-secondary);">Here's what's happening with your projects today.</p>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+                <button class="btn btn-outline" id="menu-trigger"
+                    style="display: none; @media (max-width: 768px) { display: block; }"><i
+                        class="fas fa-bars"></i></button>
+                <div class="glass-card" style="padding: 0.5rem 1rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-search" style="color: var(--text-secondary);"></i>
+                    <input type="text" placeholder="Search..."
+                        style="background: transparent; border: none; color: white; outline: none; width: 150px;">
+                </div>
+            </div>
+        </header>
+
+        <section class="action-grid">
+            <div class="glass-card action-card">
+                <div class="action-icon" style="background: rgba(79, 70, 229, 0.1); color: var(--primary);">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <h3>New Meeting</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">Start an instant meeting
+                </p>
+            </div>
+            <div class="glass-card action-card">
+                <div class="action-icon" style="background: rgba(6, 182, 212, 0.1); color: var(--secondary);">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <h3>Join Meeting</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">Enter a code or link</p>
+            </div>
+            <div class="glass-card action-card">
+                <div class="action-icon" style="background: rgba(245, 158, 11, 0.1); color: var(--accent);">
+                    <i class="fas fa-calendar-plus"></i>
+                </div>
+                <h3>Schedule</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">Plan for the future</p>
+            </div>
+        </section>
+
+        <section class="upcoming-meetings">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                <h2 style="font-size: 1.25rem;">Upcoming Meetings</h2>
+                <a href="#" style="color: var(--primary); font-size: 0.9rem;">View All</a>
+            </div>
+
+            <div class="meeting-row">
+                <div style="display: flex; gap: 1.5rem; align-items: center;">
+                    <div style="text-align: center; min-width: 60px;">
+                        <div style="font-weight: 800; font-size: 1.25rem;">10</div>
+                        <div style="color: var(--text-secondary); font-size: 0.75rem; text-transform: uppercase;">AM
+                        </div>
+                    </div>
+                    <div>
+                        <div style="font-weight: 600;">Product Sync - Stackly Redesign</div>
+                        <div style="color: var(--text-secondary); font-size: 0.8rem;">3 Participants • Team Channel
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-sm" style="padding: 0.5rem 1rem;">Join</button>
+            </div>
+
+            <div class="meeting-row">
+                <div style="display: flex; gap: 1.5rem; align-items: center;">
+                    <div style="text-align: center; min-width: 60px;">
+                        <div style="font-weight: 800; font-size: 1.25rem;">02</div>
+                        <div style="color: var(--text-secondary); font-size: 0.75rem; text-transform: uppercase;">PM
+                        </div>
+                    </div>
+                    <div>
+                        <div style="font-weight: 600;">Q2 Strategy Planning</div>
+                        <div style="color: var(--text-secondary); font-size: 0.8rem;">12 Participants • Executive</div>
+                    </div>
+                </div>
+                <button class="btn btn-outline btn-sm" style="padding: 0.5rem 1rem;">Joined</button>
+            </div>
+        </section>
+
+        <!-- Unified Ultra-Premium Footer -->
+        <footer
+            style="background: #030712; padding: 5rem 0 2rem 0; border-top: 1px solid rgba(255,255,255,0.05); color: #9ca3af; margin-top: 5rem; border-radius: 1.5rem;">
+            <div class="container">
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 4rem; margin-bottom: 5rem;">
+                    <div style="grid-column: span 2;">
+                        <div class="logo"
+                            style="margin-bottom: 2rem; font-size: 2.2rem; color: #fff; font-weight: 800; display: flex; align-items: center; gap: 0.8rem;">
+                            <i class="fas fa-bolt" style="color: #8b5cf6;"></i> Stackly
+                        </div>
+                        <p style="max-width: 320px; line-height: 1.8; margin-bottom: 2rem; font-size: 0.95rem;">
+                            Leading the digital workspace revolution through elite collaboration and neural
+                            intelligence.
+                        </p>
+                        <!-- Interactive Related Image Visual -->
+                        <div class="footer-visual-container"
+                            style="position: relative; width: 280px; height: 140px; border-radius: 1rem; overflow: hidden; margin-top: 1.5rem; cursor: pointer; border: 1px solid rgba(139, 92, 246, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 2rem;">
+                            <img src="assets/grid.webp" alt="Global Connectivity"
+                                style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) hue-rotate(270deg); transition: 0.5s transform cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+                            <div
+                                style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(3, 7, 18, 0.8) 0%, transparent 100%);">
+                            </div>
+                            <div
+                                style="position: absolute; bottom: 1rem; left: 1rem; display: flex; align-items: center; gap: 0.6rem;">
+                                <div
+                                    style="width: 8px; height: 8px; background: #8b5cf6; border-radius: 50%; box-shadow: 0 0 10px #8b5cf6; animation: footerVisualPulse 2s infinite;">
+                                </div>
+                                <span
+                                    style="font-size: 0.75rem; color: #fff; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Live
+                                    Network: Active</span>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1.5rem; font-size: 1.25rem;">
+                            <a href="#" style="color: inherit; transition: 0.3s;"><i class="fab fa-twitter"></i></a>
+                            <a href="#" style="color: inherit; transition: 0.3s;"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" style="color: inherit; transition: 0.3s;"><i class="fab fa-github"></i></a>
+                            <a href="#" style="color: inherit; transition: 0.3s;"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <style>
+                            .footer-visual-container:hover img {
+                                transform: scale(1.15) rotate(2deg);
+                                filter: brightness(0.8) hue-rotate(290deg);
+                            }
+
+                            @keyframes footerVisualPulse {
+                                0% {
+                                    opacity: 1;
+                                    transform: scale(1);
+                                }
+
+                                50% {
+                                    opacity: 0.4;
+                                    transform: scale(1.2);
+                                }
+
+                                100% {
+                                    opacity: 1;
+                                    transform: scale(1);
+                                }
+                            }
+                        </style>
+                    </div>
+
+                    <div>
+                        <h4
+                            style="color: #fff; margin-bottom: 2rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; font-weight: 700;">
+                            Platform</h4>
+                        <ul
+                            style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.2rem; font-size: 0.9rem;">
+                            <li><a href="products.html"
+                                    style="color: inherit; text-decoration: none; transition: 0.3s;">Core Features</a>
+                            </li>
+                            <li><a href="solutions.html"
+                                    style="color: inherit; text-decoration: none; transition: 0.3s;">Global
+                                    Solutions</a></li>
+                            <li><a href="pricing.html"
+                                    style="color: inherit; text-decoration: none; transition: 0.3s;">Pricing Plans</a>
+                            </li>
+                            <li><a href="dashboard.html"
+                                    style="color: inherit; text-decoration: none; transition: 0.3s;">Workspace Hub</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4
+                            style="color: #fff; margin-bottom: 2rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; font-weight: 700;">
+                            Resources</h4>
+                        <ul
+                            style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.2rem; font-size: 0.9rem;">
+                            <li><a href="resources.html"
+                                    style="color: inherit; text-decoration: none; transition: 0.3s;">Documentation</a>
+                            </li>
+                            <li><a href="resources.html"
+                                    style="color: inherit; text-decoration: none; transition: 0.3s;">Release Notes</a>
+                            </li>
+                            <li><a href="resources.html"
+                                    style="color: inherit; text-decoration: none; transition: 0.3s;">API Reference</a>
+                            </li>
+                            <li><a href="resources.html"
+                                    style="color: inherit; text-decoration: none; transition: 0.3s;">Community Forum</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Elite Bottom Bar -->
+                <div
+                    style="margin-top: 6rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; font-size: 0.85rem;">
+                    <div>&copy; 2026 Stackly Inc. Built for the era of collaboration.</div>
+                    <div style="display: flex; gap: 2.5rem;">
+                        <a href="#" style="color: inherit; text-decoration: none; transition: 0.3s;">Privacy Policy</a>
+                        <a href="#" style="color: inherit; text-decoration: none; transition: 0.3s;">Terms of
+                            Service</a>
+                        <a href="#" style="color: inherit; text-decoration: none; transition: 0.3s;">Security</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Simple Sidebar Toggle for Mobile
+        const trigger = document.getElementById('menu-trigger');
+        const sidebar = document.getElementById('sidebar');
+
+        if (trigger) {
+            trigger.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+            });
+        }
+
+        // Close sidebar when clicking main content on mobile
+        document.querySelector('.main-content').addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        // Toggle Sidebar Dropdown
+        const homeDropdown = document.querySelector('.nav-item-dropdown');
+        if (homeDropdown) {
+            homeDropdown.addEventListener('click', (e) => {
+                const menu = homeDropdown.querySelector('.dropdown-menu');
+                if (menu) {
+                    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

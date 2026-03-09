@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resources | Stackly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        :root {
+            --ai-primary: #8B5CF6;
+            --light-bg: #FFFFFF;
+            --light-surface: #F8FAFC;
+            --dark-text: #0F172A;
+            --dark-text-secondary: #475569;
+            --light-border: rgba(0, 0, 0, 0.08);
+        }
+
+        body {
+            background: var(--light-bg);
+            color: var(--dark-text);
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.8) !important;
+            border-bottom: 1px solid var(--light-border) !important;
+        }
+
+        .nav-links a {
+            color: var(--dark-text-secondary) !important;
+        }
+
+        .nav-links a:hover {
+            color: var(--ai-primary) !important;
+        }
+
+        .dropdown-menu {
+            background: white !important;
+            border: 1px solid var(--light-border) !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .dropdown-item {
+            color: var(--dark-text-secondary) !important;
+        }
+
+        .glass-card {
+            background: var(--light-surface) !important;
+            border: 1px solid var(--light-border) !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+            color: var(--dark-text) !important;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--dark-text) !important;
+        }
+
+        p,
+        span {
+            color: var(--dark-text-secondary) !important;
+        }
+
+        footer {
+            background: var(--light-surface) !important;
+            border-top: 1px solid var(--light-border) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index2.html" class="logo"><i class="fas fa-brain"></i> Stackly <span
+                    style="color: var(--ai-primary);">AI</span></a>
+            <ul class="nav-links">
+                <li class="nav-item-dropdown">
+                    <a href="index.html">Home <i class="fas fa-chevron-down"
+                            style="font-size: 0.7rem; margin-left: 0.2rem;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html" class="dropdown-item"><i class="fas fa-home"></i> Home 1</a>
+                        <a href="index2.html" class="dropdown-item"><i class="fas fa-microchip"></i> Home 2 (AI Hub)</a>
+                    </div>
+                </li>
+                <li><a href="products2.html">Products</a></li>
+                <li><a href="solutions2.html">Solutions</a></li>
+                <li><a href="pricing2.html">Pricing</a></li>
+                <li><a href="resources2.html" style="color: var(--ai-primary) !important;">Resources</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="signin.html" class="btn btn-outline">Sign In</a>
+                <a href="dashboard.html" class="btn btn-primary"
+                    style="background: linear-gradient(135deg, #E879F9, #8B5CF6); border:none;">Try AI Free</a>
+                <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section-padding" style="padding-top: 150px;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem;" data-aos="fade-up">Neural Library</h1>
+                <p style="max-width: 800px; margin: 0 auto; font-size: 1.2rem;" data-aos="fade-up" data-aos-delay="100">
+                    Deep dives into the science of AI-augmented collaboration.
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="glass-card" data-aos="fade-up">
+                    <div style="color: var(--ai-primary); font-size: 2rem; margin-bottom: 1rem;"><i
+                            class="fas fa-file-pdf"></i></div>
+                    <h3>AI Whitepaper</h3>
+                    <p style="margin-bottom: 1.5rem;">The Architecture of Collective Intelligence: How neural networks
+                        are reshaping team dynamics.</p>
+                    <a href="#" style="color: var(--ai-primary); font-weight: 600;">Download PDF <i
+                            class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 0.5rem;"></i></a>
+                </div>
+
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div style="color: #EC4899; font-size: 2rem; margin-bottom: 1rem;"><i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Technical Case Study</h3>
+                    <p style="margin-bottom: 1.5rem;">How Neural-Sync boosted creative productivity by 40% at global
+                        design firms.</p>
+                    <a href="#" style="color: var(--ai-primary); font-weight: 600;">Read Analysis <i
+                            class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 0.5rem;"></i></a>
+                </div>
+
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div style="color: #10B981; font-size: 2rem; margin-bottom: 1rem;"><i
+                            class="fas fa-graduation-cap"></i></div>
+                    <h3>Neural Academy</h3>
+                    <p style="margin-bottom: 1.5rem;">Certified courses on mastering AI-augmented collaboration for
+                        leaders and teams.</p>
+                    <a href="#" style="color: var(--ai-primary); font-weight: 600;">Start Learning <i
+                            class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 0.5rem;"></i></a>
+                </div>
+
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <div style="color: #F59E0B; font-size: 2rem; margin-bottom: 1rem;"><i class="fas fa-code"></i></div>
+                    <h3>API Documentation</h3>
+                    <p style="margin-bottom: 1.5rem;">Integrate our neural engine directly into your custom enterprise
+                        workflows and apps.</p>
+                    <a href="#" style="color: var(--ai-primary); font-weight: 600;">View Docs <i
+                            class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 0.5rem;"></i></a>
+                </div>
+
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="400">
+                    <div style="color: #6366F1; font-size: 2rem; margin-bottom: 1rem;"><i class="fas fa-terminal"></i>
+                    </div>
+                    <h3>SDK Explorer</h3>
+                    <p style="margin-bottom: 1.5rem;">Download official SDKs for Python, Node.js, and Swift to build on
+                        the Synapse Engine.</p>
+                    <a href="#" style="color: var(--ai-primary); font-weight: 600;">Get SDKs <i
+                            class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 0.5rem;"></i></a>
+                </div>
+
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="500">
+                    <div style="color: #8B5CF6; font-size: 2rem; margin-bottom: 1rem;"><i class="fas fa-blog"></i></div>
+                    <h3>Neural Blog</h3>
+                    <p style="margin-bottom: 1.5rem;">Weekly updates on the latest breakthroughs in generative AI and
+                        workspace robotics.</p>
+                    <a href="#" style="color: var(--ai-primary); font-weight: 600;">Read Blog <i
+                            class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 0.5rem;"></i></a>
+                </div>
+            </div>
+
+            <!-- NEW: Search/Help Section -->
+            <div style="margin-top: 8rem; text-align: center; background: var(--light-surface); padding: 4rem; border-radius: 2rem; border: 1px solid var(--light-border);"
+                data-aos="zoom-in">
+                <h2 style="margin-bottom: 1.5rem;">Can't find what you're looking for?</h2>
+                <p style="margin-bottom: 3rem; color: var(--dark-text-secondary);">Search our neural knowledge base or
+                    chat with our support AI.</p>
+                <div style="max-width: 600px; margin: 0 auto; display: flex; gap: 1rem;">
+                    <input type="text" placeholder="Search resources..."
+                        style="flex: 1; padding: 1rem 1.5rem; border-radius: 0.5rem; border: 1px solid var(--light-border); outline: none; background: white;">
+                    <button class="btn btn-primary" style="background: var(--ai-primary); border: none;">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Neural Knowledge Repository -->
+    <section class="section-padding" style="background: rgba(139, 92, 246, 0.03);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 5rem;" data-aos="fade-up">
+                <h2 style="font-size: 3rem; margin-bottom: 1rem; color: var(--ai-primary);">Neural Repository</h2>
+                <p style="color: var(--dark-text-secondary); max-width: 700px; margin: 0 auto;">Master the Synapse
+                    Engine with our curated library of deep-learning guides and technical audits.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
+                <!-- Resource 1 -->
+                <div class="glass-card" data-aos="fade-up" style="padding: 1.5rem; border-radius: 1.5rem;">
+                    <img src="assets/board.webp" alt="AI Research"
+                        style="width: 100%; height: 160px; object-fit: cover; border-radius: 1rem; margin-bottom: 1rem; filter: hue-rotate(280deg);">
+                    <h4 style="color: var(--ai-primary);">Neural Whitepapers</h4>
+                    <p style="font-size: 0.85rem; color: var(--dark-text-secondary);">In-depth technical papers on our
+                        transformer-based audio isolation and low-latency dubbing models.</p>
+                </div>
+                <!-- Resource 2 -->
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="100"
+                    style="padding: 1.5rem; border-radius: 1.5rem;">
+                    <img src="assets/engage.webp" alt="Prompting Guide"
+                        style="width: 100%; height: 160px; object-fit: cover; border-radius: 1rem; margin-bottom: 1rem; filter: hue-rotate(280deg);">
+                    <h4 style="color: var(--ai-secondary);">Prompt Masterclass</h4>
+                    <p style="font-size: 0.85rem; color: var(--dark-text-secondary);">Learn how to communicate
+                        effectively with our integrated AI agents to extract maximum team value.</p>
+                </div>
+                <!-- Resource 3 -->
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="200"
+                    style="padding: 1.5rem; border-radius: 1.5rem;">
+                    <img src="assets/shield.webp" alt="Ethics Log"
+                        style="width: 100%; height: 160px; object-fit: cover; border-radius: 1rem; margin-bottom: 1rem; filter: hue-rotate(280deg);">
+                    <h4 style="color: #EC4899;">Bias Audit Logs</h4>
+                    <p style="font-size: 0.85rem; color: var(--dark-text-secondary);">Monthly transparency reports on
+                        our model tuning, ensuring zero-bias in meeting summaries and action items.</p>
+                </div>
+                <!-- Resource 4 -->
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="300"
+                    style="padding: 1.5rem; border-radius: 1.5rem;">
+                    <img src="assets/setup.webp" alt="Dev Setup"
+                        style="width: 100%; height: 160px; object-fit: cover; border-radius: 1rem; margin-bottom: 1rem; filter: hue-rotate(280deg);">
+                    <h4 style="color: #10B981;">Architect Manuals</h4>
+                    <p style="font-size: 0.85rem; color: var(--dark-text-secondary);">Step-by-step guides for IT admins
+                        to deploy local neural nodes and secure on-premise AI gateways.</p>
+                </div>
+                <!-- Resource 5 -->
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="400"
+                    style="padding: 1.5rem; border-radius: 1.5rem;">
+                    <img src="assets/mobile.webp" alt="AI Tutorials"
+                        style="width: 100%; height: 160px; object-fit: cover; border-radius: 1rem; margin-bottom: 1rem; filter: hue-rotate(280deg);">
+                    <h4 style="color: #6366F1;">Vision Tutorials</h4>
+                    <p style="font-size: 0.85rem; color: var(--dark-text-secondary);">High-definition video courses on
+                        mastering holographic presence and spatial collaboration tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unified Ultra-Premium Footer (AI Hub Version) -->
+    <footer
+        style="background: #030712; padding: 5rem 0 2rem 0; border-top: 1px solid rgba(255,255,255,0.05); color: #9ca3af; margin-top: 5rem;">
+        <div class="container">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 4rem; margin-bottom: 5rem;">
+                <div style="grid-column: span 2;">
+                    <div class="logo"
+                        style="margin-bottom: 2rem; font-size: 2.2rem; color: var(--ai-primary); font-weight: 800; display: flex; align-items: center; gap: 0.8rem;">
+                        <i class="fas fa-brain"></i> Stackly AI
+                    </div>
+                    <p style="max-width: 320px; line-height: 1.8; margin-bottom: 2rem; font-size: 0.95rem;">
+                        Revolutionizing the future of work with neural-powered collaboration and workspace intelligence.
+                    </p>
+                    <!-- Interactive Neural Visual -->
+                    <div class="footer-neural-visual"
+                        style="position: relative; width: 280px; height: 140px; border-radius: 1rem; overflow: hidden; margin-top: 1.5rem; cursor: pointer; border: 1px solid rgba(168, 85, 247, 0.3); box-shadow: 0 10px 40px rgba(168, 85, 247, 0.2); margin-bottom: 2rem;">
+                        <img src="assets/canvas.webp" alt="Neural Core"
+                            style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) hue-rotate(280deg); transition: 0.8s transform ease;">
+                        <div
+                            style="position: absolute; inset: 0; background: radial-gradient(circle at center, transparent 0%, rgba(3, 7, 18, 0.8) 100%);">
+                        </div>
+                        <div
+                            style="position: absolute; bottom: 1rem; left: 1rem; display: flex; align-items: center; gap: 0.6rem;">
+                            <div
+                                style="width: 8px; height: 8px; background: #a855f7; border-radius: 50%; box-shadow: 0 0 15px #a855f7; animation: neuralPulse 1.5s infinite alternate;">
+                            </div>
+                            <span
+                                style="font-size: 0.75rem; color: #fff; font-weight: 800; text-transform: uppercase; letter-spacing: 2px;">Synapse:
+                                Online</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1.5rem; font-size: 1.25rem;">
+                        <a href="#" style="color: inherit; transition: 0.3s;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: inherit; transition: 0.3s;"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" style="color: inherit; transition: 0.3s;"><i class="fab fa-github"></i></a>
+                        <a href="#" style="color: inherit; transition: 0.3s;"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <style>
+                        .footer-neural-visual:hover img {
+                            transform: scale(1.2) rotate(-1deg);
+                            filter: brightness(0.9) hue-rotate(300deg);
+                        }
+
+                        @keyframes neuralPulse {
+                            from {
+                                opacity: 1;
+                                transform: scale(1);
+                            }
+
+                            to {
+                                opacity: 0.3;
+                                transform: scale(1.3);
+                            }
+                        }
+                    </style>
+                </div>
+
+                <div>
+                    <h4
+                        style="color: #fff; margin-bottom: 2rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; font-weight: 700;">
+                        Neural Network</h4>
+                    <ul
+                        style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.2rem; font-size: 0.9rem;">
+                        <li><a href="index.html"
+                                style="color: inherit; text-decoration: none; transition: 0.3s;">Classic Mode</a></li>
+                        <li><a href="index2.html" style="color: inherit; text-decoration: none; transition: 0.3s;">AI
+                                Hub Home</a></li>
+                        <li><a href="dashboard.html"
+                                style="color: inherit; text-decoration: none; transition: 0.3s;">Neural Dashboard</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4
+                        style="color: #fff; margin-bottom: 2rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; font-weight: 700;">
+                        AI Platform</h4>
+                    <ul
+                        style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.2rem; font-size: 0.9rem;">
+                        <li><a href="products2.html" style="color: inherit; text-decoration: none; transition: 0.3s;">AI
+                                Features</a></li>
+                        <li><a href="solutions2.html"
+                                style="color: inherit; text-decoration: none; transition: 0.3s;">Neural Solutions</a>
+                        </li>
+                        <li><a href="pricing2.html"
+                                style="color: inherit; text-decoration: none; transition: 0.3s;">Token Plans</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Optimized Newsletter Integration -->
+            <div style="padding-top: 5rem; border-top: 1px solid rgba(255,255,255,0.05);">
+                <h4
+                    style="color: #fff; margin-bottom: 1.5rem; text-transform: uppercase; font-size: 1rem; letter-spacing: 1px; font-weight: 800;">
+                    Newsletter</h4>
+                <p style="margin-bottom: 2rem; font-size: 1rem;">Stay updated on the neural evolution.</p>
+                <div style="display: flex; gap: 1rem; max-width: 400px; flex-wrap: wrap;">
+                    <input type="email" placeholder="Neural ID / Email"
+                        style="flex: 1; background: #0f172a; border: 1px solid rgba(255,255,255,0.1); padding: 0.8rem 1.2rem; border-radius: 0.5rem; color: #fff; outline: none; min-width: 200px;">
+                    <button
+                        style="background: linear-gradient(135deg, #a855f7, #9333ea); border: none; padding: 0.8rem 2rem; border-radius: 0.5rem; color: #fff; font-weight: 700; cursor: pointer; box-shadow: 0 0 20px rgba(168, 85, 247, 0.4); transition: 0.3s;">Inscribe</button>
+                </div>
+            </div>
+
+            <!-- Elite Bottom Bar -->
+            <div
+                style="margin-top: 6rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; font-size: 0.85rem;">
+                <div>&copy; 2026 Stackly AI. Powered by Synapse Engine.</div>
+                <div style="display: flex; gap: 2.5rem;">
+                    <a href="#" style="color: inherit; text-decoration: none; transition: 0.3s;">Synapse Policy</a>
+                    <a href="#" style="color: inherit; text-decoration: none; transition: 0.3s;">Rules of Play</a>
+                    <a href="#" style="color: inherit; text-decoration: none; transition: 0.3s;">Neural Security</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+
+</html>

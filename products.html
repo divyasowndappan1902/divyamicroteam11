@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Stackly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i class="fas fa-bolt"></i> Stackly</a>
+            <ul class="nav-links">
+                <li class="nav-item-dropdown">
+                    <a href="index.html">Home <i class="fas fa-chevron-down"
+                            style="font-size: 0.7rem; margin-left: 0.2rem;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html" class="dropdown-item"><i class="fas fa-home"></i> Home 1</a>
+                        <a href="index2.html" class="dropdown-item"><i class="fas fa-microchip"></i> Home 2 (AI Hub)</a>
+                    </div>
+                </li>
+                <li><a href="#" style="color: var(--primary);">Products</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="signin.html" class="btn btn-outline">Sign In</a>
+                <a href="dashboard.html" class="btn btn-primary">Try for Free</a>
+                <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section-padding" style="padding-top: 150px;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem;" data-aos="fade-up">Tools for Modern Collaboration
+                </h1>
+                <p style="color: var(--text-secondary); max-width: 800px; margin: 0 auto; font-size: 1.2rem;"
+                    data-aos="fade-up" data-aos-delay="100">
+                    Everything you need to connect your team and get work done, all in one place.
+                </p>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 6rem;">
+                <!-- Product 1 -->
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
+                    <div data-aos="fade-right">
+                        <span
+                            style="color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Conferencing</span>
+                        <h2 style="font-size: 2.5rem; margin: 1rem 0;">Smart Meeting Rooms</h2>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Host professional meetings with
+                            high-definition audio and video. Stackly Rooms auto-adjusts to your bandwidth and provides
+                            real-time noise cancellation.</p>
+                        <ul style="display: flex; flex-direction: column; gap: 1rem;">
+                            <li><i class="fas fa-check-circle" style="color: var(--primary);"></i> 4K Video Quality</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--primary);"></i> Background Blur &
+                                Virtual Sets</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--primary);"></i> Real-time closed
+                                captioning</li>
+                        </ul>
+                    </div>
+                    <div class="glass-card"
+                        style="height: 300px; display: flex; justify-content: center; align-items: center; font-size: 5rem; color: var(--primary);"
+                        data-aos="zoom-in">
+                        <i class="fas fa-video"></i>
+                    </div>
+                </div>
+
+
+                <!-- Product 2 -->
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
+                    <div class="glass-card"
+                        style="height: 300px; display: flex; justify-content: center; align-items: center; font-size: 5rem; color: var(--secondary); order: 2; @media (max-width: 768px) { order: 1; }"
+                        data-aos="zoom-in">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div data-aos="fade-left" style="order: 1; @media (max-width: 768px) { order: 2; }">
+                        <span
+                            style="color: var(--secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Communication</span>
+                        <h2 style="font-size: 2.5rem; margin: 1rem 0;">Direct & Team Messaging</h2>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Stay connected between meetings
+                            with seamless chat. Share files, create threads, and use emojis to keep the conversation
+                            going.</p>
+                        <ul style="display: flex; flex-direction: column; gap: 1rem;">
+                            <li><i class="fas fa-check-circle" style="color: var(--secondary);"></i> Persistent chat
+                                history</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--secondary);"></i> File sharing up to
+                                5GB</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--secondary);"></i> Deep search
+                                functionality</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Product 3: Breakout Rooms & Large Events -->
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
+                    <div data-aos="fade-right">
+                        <span
+                            style="color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Scale</span>
+                        <h2 style="font-size: 2.5rem; margin: 1rem 0;">Breakout Rooms & Webinars</h2>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Manage complex meetings with ease.
+                            Divide participants into sub-groups for focused work or host massive webinars for thousands.
+                        </p>
+                        <ul style="display: flex; flex-direction: column; gap: 1rem;">
+                            <li><i class="fas fa-check-circle" style="color: var(--accent);"></i> Create up to 50
+                                breakout rooms</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--accent);"></i> Host up to 10k webinar
+                                attendees</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--accent);"></i> Real-time audience Q&A
+                                & Polls</li>
+                        </ul>
+                    </div>
+                    <div class="glass-card"
+                        style="height: 300px; display: flex; justify-content: center; align-items: center; font-size: 5rem; color: var(--accent);"
+                        data-aos="zoom-in">
+                        <i class="fas fa-users-rectangle"></i>
+                    </div>
+                </div>
+
+                <!-- Product 4: AI Insights -->
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
+                    <div class="glass-card"
+                        style="height: 300px; display: flex; justify-content: center; align-items: center; font-size: 5rem; color: #10B981; order: 2; @media (max-width: 768px) { order: 1; }"
+                        data-aos="zoom-in">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div data-aos="fade-left" style="order: 1; @media (max-width: 768px) { order: 2; }">
+                        <span
+                            style="color: #10B981; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Intelligence</span>
+                        <h2 style="font-size: 2.5rem; margin: 1rem 0;">AI Productivity Suite</h2>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Focus on the conversation while
+                            Stackly handles the notes. Our AI analyzes your meetings to provide summaries and action
+                            items.</p>
+                        <ul style="display: flex; flex-direction: column; gap: 1rem;">
+                            <li><i class="fas fa-check-circle" style="color: #10B981;"></i> Automated meeting recaps
+                            </li>
+                            <li><i class="fas fa-check-circle" style="color: #10B981;"></i> Action item & task detection
+                            </li>
+                            <li><i class="fas fa-check-circle" style="color: #10B981;"></i> Multilingual live
+                                translation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Product 5: App Integration -->
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
+                    <div data-aos="fade-right">
+                        <span
+                            style="color: #6366F1; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Ecosystem</span>
+                        <h2 style="font-size: 2.5rem; margin: 1rem 0;">Extensible App Hub</h2>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Bring your favorite tools directly
+                            into your meetings. Integrate with project management, CRM, and design platforms seamlessly.
+                        </p>
+                        <ul style="display: flex; flex-direction: column; gap: 1rem;">
+                            <li><i class="fas fa-check-circle" style="color: #6366F1;"></i> 1,000+ available
+                                integrations</li>
+                            <li><i class="fas fa-check-circle" style="color: #6366F1;"></i> Custom API for internal
+                                tools</li>
+                            <li><i class="fas fa-check-circle" style="color: #6366F1;"></i> SSO & Enterprise-ready
+                                security</li>
+                        </ul>
+                    </div>
+                    <div class="glass-card"
+                        style="height: 300px; display: flex; justify-content: center; align-items: center; font-size: 5rem; color: #6366F1;"
+                        data-aos="zoom-in">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- New Ecosystem Section -->
+    <section class="section-padding" style="background: rgba(15, 23, 42, 0.5);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="font-size: 2.5rem;" data-aos="fade-up">Modern Meeting Ecosystem</h2>
+                <p style="color: var(--text-secondary); margin-top: 1rem;" data-aos="fade-up" data-aos-delay="100">
+                    Expanding the boundaries of how teams interact and succeed together.</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Ecosystem 1 -->
+                <div class="glass-card feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Anywhere Mobility</h3>
+                    <p>Stay connected on the move with our high-fidelity mobile app. Seamlessly switch from desktop to
+                        tablet or phone without dropping your call.</p>
+                </div>
+                <!-- Ecosystem 2 -->
+                <div class="glass-card feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Certified Hardware</h3>
+                    <p>From personal webcams to massive room systems, Stackly integrates with industry-leading hardware
+                        for the best audio-visual experience.</p>
+                </div>
+                <!-- Ecosystem 3 -->
+                <div class="glass-card feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Unified Messaging</h3>
+                    <p>Bring all your communications into one hub. Organize conversations by projects, teams, or
+                        interests with advanced threading and file sharing.</p>
+                </div>
+                <!-- Ecosystem 4 -->
+                <div class="glass-card feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <h3>Dynamic Engagement</h3>
+                    <p>Keep your audience focused with live reactions, hand-raising, and interactive polls that provide
+                        instant feedback during any session.</p>
+                </div>
+                <!-- Ecosystem 5 -->
+                <div class="glass-card feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <h3>Smart Archive</h3>
+                    <p>Automatically store every meeting in a searchable digital library. Access transcripts,
+                        highlights, and recordings with enterprise-grade security.</p>
+                </div>
+                <!-- Ecosystem 6 -->
+                <div class="glass-card feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <h3>Global Inclusivity</h3>
+                    <p>Break language and accessibility barriers with real-time live captions, sign language
+                        interpretation windows, and assistive technology support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elite Platform Extensions -->
+    <section class="section-padding">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 5rem;" data-aos="fade-up">
+                <h2 style="font-size: 3rem; margin-bottom: 1rem;">Platform Extensions</h2>
+                <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto;">Beyond standard meetings,
+                    explore the tools that power high-performance environments.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
+                <!-- Extension 1 -->
+                <div class="glass-card" data-aos="fade-up" style="padding: 1.5rem;">
+                    <img src="assets/access.webp" alt="Protocol Vaults"
+                        style="width: 100%; height: 150px; object-fit: cover; border-radius: 0.5rem; margin-bottom: 1rem;">
+                    <h4>Protocol Vaults</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Encrypted data storage with custom
+                        retention policies for legal and financial compliance.</p>
+                </div>
+                <!-- Extension 2 -->
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="100" style="padding: 1.5rem;">
+                    <img src="assets/chat.webp" alt="Unified Connect"
+                        style="width: 100%; height: 150px; object-fit: cover; border-radius: 0.5rem; margin-bottom: 1rem;">
+                    <h4>Unified Messaging</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary);">A single inbox for all internal
+                        threads, external guest chats, and automated bot alerts.</p>
+                </div>
+                <!-- Extension 3 -->
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="200" style="padding: 1.5rem;">
+                    <img src="assets/insights.webp" alt="Behavioral Analytics"
+                        style="width: 100%; height: 150px; object-fit: cover; border-radius: 0.5rem; margin-bottom: 1rem;">
+                    <h4>Team Insights</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Advanced heatmaps and engagement
+                        metrics to optimize team meetings and resource allocation.</p>
+                </div>
+                <!-- Extension 4 -->
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="300" style="padding: 1.5rem;">
+                    <img src="assets/hardware.webp" alt="Certified Audio"
+                        style="width: 100%; height: 150px; object-fit: cover; border-radius: 0.5rem; margin-bottom: 1rem;">
+                    <h4>Elite Peripherals</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Deep firmware integration with
+                        industry-leading hardware for the best audio-visual experience.</p>
+                </div>
+                <!-- Extension 5 -->
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="400" style="padding: 1.5rem;">
+                    <img src="assets/mobile.webp" alt="Native Mobile"
+                        style="width: 100%; height: 150px; object-fit: cover; border-radius: 0.5rem; margin-bottom: 1rem;">
+                    <h4>Mobile Ecosystem</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Enterprise-grade mobility with native
+                        app support for biometric login and secure file access.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unified Ultra-Premium Footer -->
+    <footer
+        style="background: #030712; padding: 5rem 0 2rem 0; border-top: 1px solid rgba(255,255,255,0.05); color: #9ca3af; margin-top: 5rem;">
+        <div class="container">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 4rem; margin-bottom: 5rem;">
+                <div style="grid-column: span 2;">
+                    <div class="logo"
+                        style="margin-bottom: 2rem; font-size: 2.2rem; color: #fff; font-weight: 800; display: flex; align-items: center; gap: 0.8rem;">
+                        <i class="fas fa-bolt" style="color: #8b5cf6;"></i> Stackly
+                    </div>
+                    <p style="max-width: 320px; line-height: 1.8; margin-bottom: 2rem; font-size: 0.95rem;">
+                        Leading the digital workspace revolution through elite collaboration and neural intelligence.
+                    </p>
+                    <!-- Interactive Related Image Visual -->
+                    <div class="footer-visual-container"
+                        style="position: relative; width: 280px; height: 140px; border-radius: 1rem; overflow: hidden; margin-top: 1.5rem; cursor: pointer; border: 1px solid rgba(139, 92, 246, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 2rem;">
+                        <img src="assets/grid.webp" alt="Global Connectivity"
+                            style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) hue-rotate(270deg); transition: 0.5s transform cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+                        <div
+                            style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(3, 7, 18, 0.8) 0%, transparent 100%);">
+                        </div>
+                        <div
+                            style="position: absolute; bottom: 1rem; left: 1rem; display: flex; align-items: center; gap: 0.6rem;">
+                            <div
+                                style="width: 8px; height: 8px; background: #8b5cf6; border-radius: 50%; box-shadow: 0 0 10px #8b5cf6; animation: footerVisualPulse 2s infinite;">
+                            </div>
+                            <span
+                                style="font-size: 0.75rem; color: #fff; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Live
+                                Network: Active</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1.5rem; font-size: 1.25rem;">
+                        <a href="#" style="color: inherit; transition: 0.3s;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: inherit; transition: 0.3s;"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" style="color: inherit; transition: 0.3s;"><i class="fab fa-github"></i></a>
+                        <a href="#" style="color: inherit; transition: 0.3s;"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <style>
+                        .footer-visual-container:hover img {
+                            transform: scale(1.15) rotate(2deg);
+                            filter: brightness(0.8) hue-rotate(290deg);
+                        }
+
+                        @keyframes footerVisualPulse {
+                            0% {
+                                opacity: 1;
+                                transform: scale(1);
+                            }
+
+                            50% {
+                                opacity: 0.4;
+                                transform: scale(1.2);
+                            }
+
+                            100% {
+                                opacity: 1;
+                                transform: scale(1);
+                            }
+                        }
+                    </style>
+                </div>
+
+                <div>
+                    <h4
+                        style="color: #fff; margin-bottom: 2rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; font-weight: 700;">
+                        Platform</h4>
+                    <ul
+                        style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.2rem; font-size: 0.9rem;">
+                        <li><a href="products.html"
+                                style="color: inherit; text-decoration: none; transition: 0.3s;">Core Features</a></li>
+                        <li><a href="solutions.html"
+                                style="color: inherit; text-decoration: none; transition: 0.3s;">Global Solutions</a>
+                        </li>
+                        <li><a href="pricing.html"
+                                style="color: inherit; text-decoration: none; transition: 0.3s;">Pricing Plans</a></li>
+                        <li><a href="dashboard.html"
+                                style="color: inherit; text-decoration: none; transition: 0.3s;">Workspace Hub</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4
+                        style="color: #fff; margin-bottom: 2rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; font-weight: 700;">
+                        Resources</h4>
+                    <ul
+                        style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.2rem; font-size: 0.9rem;">
+                        <li><a href="resources.html"
+                                style="color: inherit; text-decoration: none; transition: 0.3s;">Documentation</a></li>
+                        <li><a href="resources.html"
+                                style="color: inherit; text-decoration: none; transition: 0.3s;">Release Notes</a></li>
+                        <li><a href="resources.html"
+                                style="color: inherit; text-decoration: none; transition: 0.3s;">API Reference</a></li>
+                        <li><a href="resources.html"
+                                style="color: inherit; text-decoration: none; transition: 0.3s;">Community Forum</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Optimized Newsletter Integration -->
+            <div style="padding-top: 5rem; border-top: 1px solid rgba(255,255,255,0.05);">
+                <h4
+                    style="color: #fff; margin-bottom: 1.5rem; text-transform: uppercase; font-size: 1rem; letter-spacing: 1px; font-weight: 800;">
+                    Newsletter</h4>
+                <p style="margin-bottom: 2rem; font-size: 0.9rem;">Stay updated on workspace evolution.</p>
+                <div style="display: flex; gap: 1rem; max-width: 400px; flex-wrap: wrap;">
+                    <input type="email" placeholder="Email address"
+                        style="flex: 1; background: #0f172a; border: 1px solid rgba(255,255,255,0.1); padding: 0.8rem 1.2rem; border-radius: 0.5rem; color: #fff; outline: none; min-width: 200px;">
+                    <button
+                        style="background: linear-gradient(135deg, #a855f7, #9333ea); border: none; padding: 0.8rem 2rem; border-radius: 0.5rem; color: #fff; font-weight: 700; cursor: pointer; box-shadow: 0 0 20px rgba(168, 85, 247, 0.4); transition: 0.3s;">Join</button>
+                </div>
+            </div>
+
+            <!-- Elite Bottom Bar -->
+            <div
+                style="margin-top: 6rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; font-size: 0.85rem;">
+                <div>&copy; 2026 Stackly Inc. Built for the era of collaboration.</div>
+                <div style="display: flex; gap: 2.5rem;">
+                    <a href="#" style="color: inherit; text-decoration: none; transition: 0.3s;">Privacy Policy</a>
+                    <a href="#" style="color: inherit; text-decoration: none; transition: 0.3s;">Terms of Service</a>
+                    <a href="#" style="color: inherit; text-decoration: none; transition: 0.3s;">Security</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+
+</html>

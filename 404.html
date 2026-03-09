@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Stackly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .error-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-bolt"></i> Stackly
+            </a>
+
+            <ul class="nav-links">
+                <li class="nav-item-dropdown">
+                    <a href="index.html">Home <i class="fas fa-chevron-down"
+                            style="font-size: 0.7rem; margin-left: 0.2rem;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html" class="dropdown-item"><i class="fas fa-home"></i> Home 1</a>
+                        <a href="index2.html" class="dropdown-item"><i class="fas fa-microchip"></i> Home 2 (AI Hub)</a>
+                    </div>
+                </li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="signin.html" class="btn btn-outline">Sign In</a>
+                <a href="dashboard.html" class="btn btn-primary">Try for Free</a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <h2 style="margin-bottom: 1.5rem;">Oops! Lost in the digital void.</h2>
+        <p style="color: var(--text-secondary); max-width: 500px; margin-bottom: 2.5rem;">
+            The page you are looking for might have been moved, deleted, or never existed in the first place.
+        </p>
+        <a href="index.html" class="btn btn-primary">Back to Home</a>
+    </div>
+</body>
+
+</html>

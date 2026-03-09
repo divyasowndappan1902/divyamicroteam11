@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Stackly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .pricing-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card.popular {
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(79, 70, 229, 0.2);
+        }
+
+        .badge {
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: var(--primary);
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            font-weight: 800;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i class="fas fa-bolt"></i> Stackly</a>
+            <ul class="nav-links">
+                <li class="nav-item-dropdown">
+                    <a href="index.html">Home <i class="fas fa-chevron-down"
+                            style="font-size: 0.7rem; margin-left: 0.2rem;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html" class="dropdown-item"><i class="fas fa-home"></i> Home 1</a>
+                        <a href="index2.html" class="dropdown-item"><i class="fas fa-microchip"></i> Home 2 (AI Hub)</a>
+                    </div>
+                </li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="#" style="color: var(--primary);">Pricing</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="signin.html" class="btn btn-outline">Sign In</a>
+                <a href="dashboard.html" class="btn btn-primary">Try for Free</a>
+                <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section-padding" style="padding-top: 150px;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem;" data-aos="fade-up">Simple, Transparent Pricing
+                </h1>
+                <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;" data-aos="fade-up"
+                    data-aos-delay="100">
+                    Choose the plan that fits your team's size and needs. No hidden fees.
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
+                <!-- Free Plan: Starter -->
+                <div class="glass-card pricing-card" data-aos="fade-up">
+                    <div>
+                        <h3 style="margin-bottom: 1rem;">Starter</h3>
+                        <div style="font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem;">$0 <span
+                                style="font-size: 1rem; color: var(--text-secondary);">/mo</span></div>
+                        <ul style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+                            <li><i class="fas fa-check" style="color: var(--primary);"></i> Up to 40-minute meetings
+                            </li>
+                            <li><i class="fas fa-check" style="color: var(--primary);"></i> 100 participants</li>
+                            <li><i class="fas fa-check" style="color: var(--primary);"></i> Screen sharing</li>
+                        </ul>
+                    </div>
+                    <a href="dashboard.html" class="btn btn-outline" style="width: 100%; text-align: center;">Get
+                        Started</a>
+                </div>
+
+                <!-- Pro Plan: Business -->
+                <div class="glass-card pricing-card popular" data-aos="fade-up" data-aos-delay="100">
+                    <div class="badge">POPULAR</div>
+                    <div>
+                        <h3 style="margin-bottom: 1rem;">Business</h3>
+                        <div style="font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem;">$15 <span
+                                style="font-size: 1rem; color: var(--text-secondary);">/user/mo</span></div>
+                        <ul style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+                            <li><i class="fas fa-check" style="color: var(--primary);"></i> Unlimited meeting duration
+                            </li>
+                            <li><i class="fas fa-check" style="color: var(--primary);"></i> 300 participants</li>
+                            <li><i class="fas fa-check" style="color: var(--primary);"></i> 5GB cloud recording</li>
+                            <li><i class="fas fa-check" style="color: var(--primary);"></i> Whiteboarding</li>
+                        </ul>
+                    </div>
+                    <a href="dashboard.html" class="btn btn-primary" style="width: 100%; text-align: center;">Buy
+                        Now</a>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="glass-card pricing-card" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <h3 style="margin-bottom: 1rem;">Enterprise</h3>
+                        <div style="font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem;">Custom</div>
+                        <ul style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+                            <li><i class="fas fa-check" style="color: var(--primary);"></i> Up to 1,000 participants
+                            </li>
+                            <li><i class="fas fa-check" style="color: var(--primary);"></i> Unlimited storage</li>
+                            <li><i class="fas fa-check" style="color: var(--primary);"></i> SSO & Advanced Security</li>
+                            <li><i class="fas fa-check" style="color: var(--primary);"></i> Dedicated success manager
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-outline" style="width: 100%; text-align: center;">Contact
+                        Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section class="section-padding" style="padding-top: 0;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2.5rem;">Compare Plan Features</h2>
+            </div>
+            <div
+                style="overflow-x: auto; background: rgba(15, 23, 42, 0.4); border-radius: 1.5rem; border: 1px solid var(--border);">
+                <table style="width: 100%; border-collapse: collapse; color: white; text-align: left;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <th style="padding: 1.5rem;">Feature</th>
+                            <th style="padding: 1.5rem;">Starter</th>
+                            <th style="padding: 1.5rem;">Business</th>
+                            <th style="padding: 1.5rem;">Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 1.2rem; font-weight: 600;">Max Participants</td>
+                            <td style="padding: 1.2rem;">100</td>
+                            <td style="padding: 1.2rem;">300</td>
+                            <td style="padding: 1.2rem;">Up to 1,000</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 1.2rem; font-weight: 600;">Meeting Duration</td>
+                            <td style="padding: 1.2rem;">40 mins</td>
+                            <td style="padding: 1.2rem;">Unlimited</td>
+                            <td style="padding: 1.2rem;">Unlimited</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 1.2rem; font-weight: 600;">Cloud Recording</td>
+                            <td style="padding: 1.2rem;">Local Only</td>
+                            <td style="padding: 1.2rem;">5GB Cloud</td>
+                            <td style="padding: 1.2rem;">Unlimited</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 1.2rem; font-weight: 600;">Standard Support</td>
+                            <td style="padding: 1.2rem;"><i class="fas fa-check" style="color: #10B981;"></i></td>
+                            <td style="padding: 1.2rem;"><i class="fas fa-check" style="color: #10B981;"></i></td>
+                            <td style="padding: 1.2rem;"><i class="fas fa-check" style="color: #10B981;"></i></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 1.2rem; font-weight: 600;">Advanced Security</td>
+                            <td style="padding: 1.2rem;"><i class="fas fa-times" style="color: #EF4444;"></i></td>
+                            <td style="padding: 1.2rem;"><i class="fas fa-check" style="color: #10B981;"></i></td>
+                            <td style="padding: 1.2rem;"><i class="fas fa-check" style="color: #10B981;"></i></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 1.2rem; font-weight: 600;">Dedicated Manager</td>
+                            <td style="padding: 1.2rem;"><i class="fas fa-times" style="color: #EF4444;"></i></td>
+                            <td style="padding: 1.2rem;"><i class="fas fa-times" style="color: #EF4444;"></i></td>
+                            <td style="padding: 1.2rem;"><i class="fas fa-check" style="color: #10B981;"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Core Meeting Features Section -->
+    <section class="section-padding"
+        style="background: rgba(255, 255, 255, 0.02); border-top: 1px solid var(--border);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="font-size: 2.5rem;" data-aos="fade-up">Standard in Every Plan</h2>
+                <p style="color: var(--text-secondary); margin-top: 1rem;" data-aos="fade-up" data-aos-delay="100">
+                    Powerful features designed to make your meetings productive, no matter the cost.</p>
+            </div>
+
+
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <!-- Feature 1 -->
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div style="color: var(--primary); font-size: 1.5rem; margin-bottom: 0.5rem;"><i
+                            class="fas fa-video"></i></div>
+                    <h4>HD Video Quality</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem;">Experience high-definition video
+                        conferencing that automatically adjusts to your connection for the best experience.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 0.5rem;"><i
+                            class="fas fa-cloud-arrow-up"></i></div>
+                    <h4>Cloud Storage</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem;">Securely store your meeting recordings
+                        and shared files in the cloud with easy access from any device.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <div style="color: var(--accent); font-size: 1.5rem; margin-bottom: 0.5rem;"><i
+                            class="fas fa-desktop"></i></div>
+                    <h4>Screen Sharing</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem;">Share your screen or specific
+                        applications instantly with low latency for smooth presentations and demonstrations.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="400">
+                    <div style="color: #10B981; font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="fas fa-lock"></i>
+                    </div>
+                    <h4>End-to-End Security</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem;">Your data is protected with
+                        industry-standard encryption, ensuring that only authorized participants can join.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="500">
+                    <div style="color: #6366F1; font-size: 1.5rem; margin-bottom: 0.5rem;"><i
+                            class="fas fa-chalkboard-user"></i></div>
+                    <h4>Kanban Whiteboard</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem;">Manage your project workflow with our
+                        integrated Kanban board, complete with virtual sticky notes and real-time team syncing.</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="600">
+                    <div style="color: #EC4899; font-size: 1.5rem; margin-bottom: 0.5rem;"><i
+                            class="fas fa-users-gear"></i></div>
+                    <h4>Lobby Management</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem;">Maintain control over your meetings
+                        with a virtual lobby, allowing you to admit or deny participants as needed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: 2.5rem;" data-aos="fade-up">Frequently Asked Questions</h2>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <!-- Q1 -->
+                    <div class="glass-card" style="padding: 1.5rem;" data-aos="fade-up">
+                        <h4 style="margin-bottom: 1rem; color: var(--primary);">Can I switch plans later?</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Yes! You can upgrade or downgrade
+                            your plan at any time through your account dashboard. Changes will be reflected in your next
+                            billing cycle.</p>
+                    </div>
+                    <!-- Q2 -->
+                    <div class="glass-card" style="padding: 1.5rem;" data-aos="fade-up" data-aos-delay="100">
+                        <h4 style="margin-bottom: 1rem; color: var(--primary);">Is there a limit on meeting recordings?
+                        </h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Starter users can record meetings
+                            locally. Business users get 5GB of cloud storage, and Enterprise users enjoy unlimited cloud
+                            storage for all their sessions.</p>
+                    </div>
+                    <!-- Q3 -->
+                    <div class="glass-card" style="padding: 1.5rem;" data-aos="fade-up" data-aos-delay="200">
+                        <h4 style="margin-bottom: 1rem; color: var(--primary);">What happens after the 40-minute limit
+                            on Starter?</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">On the Starter plan, meetings with 3
+                            or more participants will end at 40 minutes. You can restart the meeting immediately or
+                            upgrade to Business for unlimited duration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enterprise Add-ons -->
+    <section class="section-padding">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 5rem;" data-aos="fade-up">
+                <h2 style="font-size: 3rem; margin-bottom: 1rem;">Enterprise Add-ons</h2>
+                <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto;">Power up your infrastructure
+                    with high-performance supplementary services.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
+                <!-- Add-on 1 -->
+                <div class="glass-card" data-aos="fade-up" style="padding: 1.5rem;">
+                    <img src="assets/lock.webp" alt="Compliance Pack"
+                        style="width: 100%; height: 150px; object-fit: cover; border-radius: 0.5rem; margin-bottom: 1rem;">
+                    <h4>Compliance Pack</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Advanced audit logging, data residency
+                        controls, and e-discovery integration.</p>
+                </div>
+                <!-- Add-on 2 -->
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="100" style="padding: 1.5rem;">
+                    <img src="assets/canvas.webp" alt="Creative Studio"
+                        style="width: 100%; height: 150px; object-fit: cover; border-radius: 0.5rem; margin-bottom: 1rem;">
+                    <h4>Creative Suite</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Unlimited whiteboard storage,
+                        collaborative design tools, and asset management.</p>
+                </div>
+                <!-- Add-on 3 -->
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="200" style="padding: 1.5rem;">
+                    <img src="assets/insights.webp" alt="Analytics Dash"
+                        style="width: 100%; height: 150px; object-fit: cover; border-radius: 0.5rem; margin-bottom: 1rem;">
+                    <h4>Elite Analytics</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Deep behavioral insights, productivity
+                        metrics, and custom team dashboards.</p>
+                </div>
+                <!-- Add-on 4 -->
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="300" style="padding: 1.5rem;">
+                    <img src="assets/mobile.webp" alt="Phone Sync"
+                        style="width: 100%; height: 150px; object-fit: cover; border-radius: 0.5rem; margin-bottom: 1rem;">
+                    <h4>Phone Bridge</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Connect your legacy phone system to our
+                        virtual grid with seamless call routing.</p>
+                </div>
+                <!-- Add-on 5 -->
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="400" style="padding: 1.5rem;">
+                    <img src="assets/chat.webp" alt="Messaging Connect"
+                        style="width: 100%; height: 150px; object-fit: cover; border-radius: 0.5rem; margin-bottom: 1rem;">
+                    <h4>Omni-Channel</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Unify Slack, Teams, and WhatsApp
+                        messages into your primary Stackly workspace.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unified Ultra-Premium Footer -->
+    <footer
+        style="background: #030712; padding: 5rem 0 2rem 0; border-top: 1px solid rgba(255,255,255,0.05); color: #9ca3af; margin-top: 5rem;">
+        <div class="container">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 4rem; margin-bottom: 5rem;">
+                <div style="grid-column: span 2;">
+                    <div class="logo"
+                        style="margin-bottom: 2rem; font-size: 2.2rem; color: #fff; font-weight: 800; display: flex; align-items: center; gap: 0.8rem;">
+                        <i class="fas fa-bolt" style="color: #8b5cf6;"></i> Stackly
+                    </div>
+                    <p style="max-width: 320px; line-height: 1.8; margin-bottom: 2rem; font-size: 0.95rem;">
+                        Leading the digital workspace revolution through elite collaboration and neural intelligence.
+                    </p>
+                    <!-- Interactive Related Image Visual -->
+                    <div class="footer-visual-container"
+                        style="position: relative; width: 280px; height: 140px; border-radius: 1rem; overflow: hidden; margin-top: 1.5rem; cursor: pointer; border: 1px solid rgba(139, 92, 246, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 2rem;">
+                        <img src="assets/grid.webp" alt="Global Connectivity"
+                            style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) hue-rotate(270deg); transition: 0.5s transform cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+                        <div
+                            style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(3, 7, 18, 0.8) 0%, transparent 100%);">
+                        </div>
+                        <div
+                            style="position: absolute; bottom: 1rem; left: 1rem; display: flex; align-items: center; gap: 0.6rem;">
+                            <div
+                                style="width: 8px; height: 8px; background: #8b5cf6; border-radius: 50%; box-shadow: 0 0 10px #8b5cf6; animation: footerVisualPulse 2s infinite;">
+                            </div>
+                            <span
+                                style="font-size: 0.75rem; color: #fff; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Live
+                                Network: Active</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1.5rem; font-size: 1.25rem;">
+                        <a href="#" style="color: inherit; transition: 0.3s;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: inherit; transition: 0.3s;"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" style="color: inherit; transition: 0.3s;"><i class="fab fa-github"></i></a>
+                        <a href="#" style="color: inherit; transition: 0.3s;"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <style>
+                        .footer-visual-container:hover img {
+                            transform: scale(1.15) rotate(2deg);
+                            filter: brightness(0.8) hue-rotate(290deg);
+                        }
+
+                        @keyframes footerVisualPulse {
+                            0% {
+                                opacity: 1;
+                                transform: scale(1);
+                            }
+
+                            50% {
+                                opacity: 0.4;
+                                transform: scale(1.2);
+                            }
+
+                            100% {
+                                opacity: 1;
+                                transform: scale(1);
+                            }
+                        }
+                    </style>
+                </div>
+
+                <div>
+                    <h4
+                        style="color: #fff; margin-bottom: 2rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; font-weight: 700;">
+                        Platform</h4>
+                    <ul
+                        style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.2rem; font-size: 0.9rem;">
+                        <li><a href="products.html"
+                                style="color: inherit; text-decoration: none; transition: 0.3s;">Core Features</a></li>
+                        <li><a href="solutions.html"
+                                style="color: inherit; text-decoration: none; transition: 0.3s;">Global Solutions</a>
+                        </li>
+                        <li><a href="pricing.html"
+                                style="color: inherit; text-decoration: none; transition: 0.3s;">Pricing Plans</a></li>
+                        <li><a href="dashboard.html"
+                                style="color: inherit; text-decoration: none; transition: 0.3s;">Workspace Hub</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4
+                        style="color: #fff; margin-bottom: 2rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; font-weight: 700;">
+                        Resources</h4>
+                    <ul
+                        style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.2rem; font-size: 0.9rem;">
+                        <li><a href="resources.html"
+                                style="color: inherit; text-decoration: none; transition: 0.3s;">Documentation</a></li>
+                        <li><a href="resources.html"
+                                style="color: inherit; text-decoration: none; transition: 0.3s;">Release Notes</a></li>
+                        <li><a href="resources.html"
+                                style="color: inherit; text-decoration: none; transition: 0.3s;">API Reference</a></li>
+                        <li><a href="resources.html"
+                                style="color: inherit; text-decoration: none; transition: 0.3s;">Community Forum</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Optimized Newsletter Integration -->
+            <div style="padding-top: 5rem; border-top: 1px solid rgba(255,255,255,0.05);">
+                <h4
+                    style="color: #fff; margin-bottom: 1.5rem; text-transform: uppercase; font-size: 1rem; letter-spacing: 1px; font-weight: 800;">
+                    Newsletter</h4>
+                <p style="margin-bottom: 2rem; font-size: 0.9rem;">Stay updated on workspace evolution.</p>
+                <div style="display: flex; gap: 1rem; max-width: 400px; flex-wrap: wrap;">
+                    <input type="email" placeholder="Email address"
+                        style="flex: 1; background: #0f172a; border: 1px solid rgba(255,255,255,0.1); padding: 0.8rem 1.2rem; border-radius: 0.5rem; color: #fff; outline: none; min-width: 200px;">
+                    <button
+                        style="background: linear-gradient(135deg, #a855f7, #9333ea); border: none; padding: 0.8rem 2rem; border-radius: 0.5rem; color: #fff; font-weight: 700; cursor: pointer; box-shadow: 0 0 20px rgba(168, 85, 247, 0.4); transition: 0.3s;">Join</button>
+                </div>
+            </div>
+
+            <!-- Elite Bottom Bar -->
+            <div
+                style="margin-top: 6rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; font-size: 0.85rem;">
+                <div>&copy; 2026 Stackly Inc. Built for the era of collaboration.</div>
+                <div style="display: flex; gap: 2.5rem;">
+                    <a href="#" style="color: inherit; text-decoration: none; transition: 0.3s;">Privacy Policy</a>
+                    <a href="#" style="color: inherit; text-decoration: none; transition: 0.3s;">Terms of Service</a>
+                    <a href="#" style="color: inherit; text-decoration: none; transition: 0.3s;">Security</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+
+</html>
